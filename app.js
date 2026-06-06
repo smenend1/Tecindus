@@ -4,15 +4,173 @@ const STORAGE_KEY = 'ti_sa_creades_v1';
 const SETTINGS_KEY = 'ti_settings_v1';
 
 const curriculum = {
+  comunes: {
+    competenciesEspecifiques: [
+      'Competència tecnològica',
+      'Competència en experimentació',
+      'Competència en modelització i simulació'
+    ],
+    competenciesTransversals: [
+      'Competència comunicativa',
+      'Competència en recerca',
+      'Gestió i tractament de la informació',
+      'Competència digital',
+      'Competència personal i interpersonal',
+      'Coneixement i interacció amb el món'
+    ],
+    objectius: [
+      '1. Concebre la tecnologia com una interrelació d’àmbits tècnics, científics, històrics, econòmics i socials.',
+      '2. Comprendre i analitzar màquines i sistemes tècnics.',
+      '3. Explicar processos tecnològics i valorar la investigació en nous productes i sistemes.',
+      '4. Utilitzar terminologia, simbologia, instruments i mètodes dels processos tecnològics.',
+      '5. Descriure propietats dels materials d’ús industrial i les seves aplicacions.',
+      '6. Reconèixer el paper de l’energia i adoptar actituds d’estalvi i eficiència energètica.',
+      '7. Analitzar aparells i productes tecnològics per explicar-ne funcionament, aplicació i qualitat.',
+      '8. Projectar, muntar, simular i experimentar circuits o sistemes elementals amb seguretat.',
+      '9. Valorar repercussions socials, econòmiques i ambientals de l’activitat tecnològica.',
+      '10. Actuar amb autonomia, confiança i seguretat en màquines, sistemes i processos tècnics.'
+    ],
+    vectors: [
+      'Aprenentatges competencials',
+      'Perspectiva de gènere',
+      'Universalitat del currículum',
+      'Qualitat de les llengües',
+      'Ciutadania democràtica i consciència global',
+      'Benestar emocional'
+    ],
+    metodologia: [
+      'Aprenentatge basat en reptes',
+      'Aprenentatge basat en projectes tecnològics',
+      'Experimentació guiada al taller o laboratori',
+      'Simulació i modelització de circuits, màquines o sistemes',
+      'Anàlisi de casos reals i presa de decisions tècniques',
+      'Treball cooperatiu amb rols tècnics',
+      'Resolució de problemes amb càlcul, esquema i justificació'
+    ],
+    organitzacio: [
+      'Treball individual amb posada en comú',
+      'Treball en parelles',
+      'Equips cooperatius de 3 o 4 alumnes',
+      'Rotació per estacions de treball',
+      'Treball de taller amb normes de seguretat',
+      'Debat tècnic i defensa oral de la proposta'
+    ],
+    recursos: [
+      'Fitxes tècniques i catàlegs de materials o màquines',
+      'Simuladors i eines digitals sense dependències externes',
+      'Multímetre, font d’alimentació i components elèctrics bàsics',
+      'Elements pneumàtics o electropneumàtics de demostració',
+      'Estris de dibuix tècnic, croquis i esquemes normalitzats',
+      'Taules de propietats, factors energètics i criteris de selecció',
+      'Materials de taller i eines de mesura'
+    ],
+    mesuresSuports: [
+      'Guia pas a pas amb exemple resolt',
+      'Plantilla d’informe tècnic',
+      'Glossari de vocabulari tecnològic',
+      'Llista de comprovació d’unitats i dades',
+      'Opcions d’ampliació per a l’alumnat avançat',
+      'Agrupaments flexibles i suport entre iguals',
+      'Representacions visuals, esquemes i models simplificats'
+    ],
+    evidencies: [
+      'Informe tècnic final',
+      'Càlculs amb unitats i procediment',
+      'Esquema, croquis o diagrama de blocs',
+      'Taula comparativa o justificació de selecció',
+      'Resultats de simulació o experimentació',
+      'Defensa oral o presentació breu',
+      'Autoavaluació i proposta de millora'
+    ],
+    instruments: [
+      'Rúbrica final amb nivells NA, AS, AN i AE',
+      'Llista de control del procés tècnic',
+      'Observació docent durant el treball',
+      'Coavaluació de l’equip',
+      'Autoavaluació individual',
+      'Revisió del quadern o dossier de treball'
+    ],
+    retornMillora: [
+      'Feedback docent escrit sobre dades, procediment i justificació',
+      'Revisió d’errors d’unitats, simbologia i vocabulari',
+      'Millora iterativa del producte final',
+      'Comparació entre proposta inicial i proposta millorada',
+      'Reflexió sobre seguretat, eficiència, cost i impacte'
+    ]
+  },
   ti1: {
     label: 'Tecnologia Industrial I',
-    blocs: ['Procés tecnològic i producció industrial','Materials','Sistemes energètics','Màquines i sistemes','Processos de fabricació'],
-    criteris: ['TI1-PT-1 Impacte social, econòmic i mediambiental','TI1-ARG-1 Argumentació sobre productes i processos','TI1-MAT-1 Propietats i aplicacions dels materials','TI1-ENE-1 Energia, eficiència i consum responsable','TI1-ENE-2 Cost energètic','TI1-MAQ-1 Màquines, mecanismes i circuits','TI1-FAB-1 Processos de fabricació','TI1-COM-1 Vocabulari tècnic','TI1-REP-1 Representació gràfica i simbologia','TI1-EXP-1 Muntatge, experimentació i simulació de circuits']
+    blocs: [
+      'Procés tecnològic i producció industrial',
+      'Materials',
+      'Sistemes energètics',
+      'Màquines i sistemes',
+      'Processos de fabricació'
+    ],
+    sabers: [
+      'Evolució tecnològica i relació entre ciència, tecnologia i societat',
+      'Procés tecnològic i organització industrial',
+      'Disseny, innovació i millora de productes',
+      'Planificació, gestió, comercialització, qualitat, normalització i seguretat',
+      'Classificació, estructura interna, propietats i aplicacions dels materials',
+      'Obtenció, transformació, aliatges, nous materials i impacte ambiental',
+      'Fonts d’energia, generació, transformació, transport i distribució',
+      'Consum responsable, estalvi i eficiència energètica',
+      'Màquines simples, unions, mecanismes i transmissió de moviment',
+      'Pneumàtica bàsica, circuits elèctrics, simbologia, muntatge i simulació',
+      'Processos de fabricació, màquines, eines, manteniment, seguretat i residus'
+    ],
+    criteris: [
+      'TI1-1 Avaluar repercussions socials, econòmiques i mediambientals de l’activitat industrial i proposar millores.',
+      'TI1-2 Argumentar idees pròpies sobre objectes i productes fabricats mitjançant processos tecnològics.',
+      'TI1-3 Descriure materials industrials, propietats, aplicacions i adequació a una finalitat concreta.',
+      'TI1-4 Reconèixer processos d’obtenció d’energia i valorar eficiència i consum responsable.',
+      'TI1-5 Calcular el cost energètic d’un local o habitatge i suggerir alternatives d’estalvi.',
+      'TI1-6 Identificar elements funcionals, estructures, mecanismes i circuits d’una màquina o sistema.',
+      'TI1-7 Descriure un procés de fabricació i valorar-ne raons econòmiques i repercussions ambientals.',
+      'TI1-8 Utilitzar vocabulari tècnic apropiat per descriure elements, processos i sistemes tecnològics.',
+      'TI1-9 Utilitzar representació gràfica, normalització, simbologia i aplicacions informàtiques.',
+      'TI1-10 Muntar, experimentar i simular circuits elèctrics, pneumàtics i de transformació d’energia amb autonomia i seguretat.'
+    ]
   },
   ti2: {
     label: 'Tecnologia Industrial II',
-    blocs: ['Materials: oxidació, corrosió, assaigs, metrotècnia i reciclatge','Màquines tèrmiques i elèctriques','Oleohidràulica i electropneumàtica','Sistemes automàtics','Control i programació de sistemes automàtics','Sistemes digitals i àlgebra de Boole'],
-    criteris: ['TI2-MAT-1 Tractaments superficials i assaigs de materials','TI2-MAT-2 Selecció de materials','TI2-MAQ-1 Motors tèrmics i elèctrics','TI2-MAQ-2 Paràmetres nominals de màquines','TI2-PNE-1 Circuits oleohidràulics i electropneumàtics','TI2-EXP-1 Muntatge, experimentació i simulació','TI2-AUT-1 Sistemes automàtics','TI2-CTRL-1 Circuits de control','TI2-REP-1 Representació tècnica','TI2-DIG-1 Circuits digitals i control programat']
+    blocs: [
+      'Materials: oxidació, corrosió, assaigs, metrotècnia i reciclatge',
+      'Màquines tèrmiques i elèctriques',
+      'Oleohidràulica i electropneumàtica',
+      'Sistemes automàtics',
+      'Control i programació de sistemes automàtics',
+      'Sistemes digitals i àlgebra de Boole'
+    ],
+    sabers: [
+      'Oxidació, corrosió i tractaments superficials dels materials',
+      'Assaigs de materials, metrotècnia, reciclatge i normes d’ús i seguretat',
+      'Formes comercials dels materials',
+      'Principis de màquines, energia útil, potència, parell, pèrdues i rendiment',
+      'Màquines tèrmiques: classificació, funcionament i aplicacions',
+      'Màquines elèctriques: classificació, funcionament i circuits d’aplicació',
+      'Calefacció, refrigeració i bomba de calor',
+      'Oleohidràulica: producció, condicionament i distribució de fluids',
+      'Accionament, regulació i control en circuits oleohidràulics i electropneumàtics',
+      'Sistemes automàtics de llaç obert i llaç tancat',
+      'Transductors, captadors, actuadors, controladors, consigna i comparadors',
+      'Sistemes digitals, àlgebra de Boole i portes lògiques',
+      'Circuits combinacionals i seqüencials',
+      'Control programat, autòmats programables i programació rígida o flexible'
+    ],
+    criteris: [
+      'TI2-1 Descriure tractaments superficials, assaigs, mesures i normes d’ús i seguretat dels materials.',
+      'TI2-2 Seleccionar materials per a una aplicació pràctica segons propietats i característiques tècniques.',
+      'TI2-3 Identificar parts de motors tèrmics i elèctrics i descriure’n funcionament i aplicacions.',
+      'TI2-4 Determinar paràmetres nominals d’una màquina o instal·lació.',
+      'TI2-5 Descriure circuits oleohidràulics i electropneumàtics i identificar-ne els elements.',
+      'TI2-6 Muntar, experimentar i simular circuits electropneumàtics amb autonomia i seguretat.',
+      'TI2-7 Analitzar una màquina o sistema automàtic i identificar elements de comandament, control i potència.',
+      'TI2-8 Experimentar circuits de control mitjançant programes de simulació o simuladors.',
+      'TI2-9 Aplicar recursos gràfics i tècnics per descriure una màquina, circuit o sistema i calcular magnituds bàsiques.',
+      'TI2-10 Muntar, comprovar i programar circuits digitals lògics i de control amb autonomia i seguretat.'
+    ]
   }
 };
 
@@ -117,25 +275,43 @@ function renderDocent(){
   const tabs=[['ident','Identificació'],['context','Context i repte'],['curr','Currículum'],['obj','Objectius i sabers'],['met','Metodologia'],['act','Activitats'],['aval','Avaluació'],['vec','Vectors'],['rub','Rúbrica'],['imp','Importar']];
   return `<section class="card"><h2>Espai docent</h2><p class="muted">Crea, importa, guarda i exporta situacions d’aprenentatge. Les SA guardades apareixen automàticament al selector de l’apartat SA.</p><div class="internal-tabs">${tabs.map(t=>`<button data-dtab="${t[0]}" class="${state.docenteTab===t[0]?'active':''}">${t[1]}</button>`).join('')}</div><div id="docTabContent">${renderDocTab()}</div><div class="quick"><button class="btn" id="saveSA">Guardar SA</button><button class="btn secondary" id="previewSA">Generar fitxa docent</button><button class="btn ghost" id="copyJson">Copiar JSON</button><button class="btn ghost" id="newSA">Nova SA en blanc</button></div></section>`;
 }
+function getCourseKey(curs){return String(curs||'').includes('II')?'ti2':'ti1';}
 function renderDocTab(){
   const s=state.currentDoc;
+  const courseKey=getCourseKey(s.curs);
+  const fixed=curriculum.comunes;
+  const cur=curriculum[courseKey];
   const field=(key,label,type='textarea')=>`<div class="field"><label>${label}</label>${type==='input'?`<input data-doc="${key}" value="${escAttr(s[key]||'')}">`:`<textarea data-doc="${key}">${esc(s[key]||'')}</textarea>`}</div>`;
-  if(state.docenteTab==='ident') return `<div class="form-row">${field('titol','Títol','input')}${field('curs','Curs','input')}${field('materia','Matèria','input')}${field('durada','Durada','input')}${field('docentGrup','Docent / grup','input')}<div class="field"><label>Font d’impressió</label><select id="fontPrint"><option ${state.settings.font==='Times New Roman'?'selected':''}>Times New Roman</option><option ${state.settings.font==='Arial'?'selected':''}>Arial</option></select></div></div>`;
+  if(state.docenteTab==='ident') return `<div class="form-row">${field('titol','Títol','input')}<div class="field"><label>Curs</label><select data-doc="curs" id="docCourse"><option ${s.curs==='Tecnologia Industrial I'?'selected':''}>Tecnologia Industrial I</option><option ${s.curs==='Tecnologia Industrial II'?'selected':''}>Tecnologia Industrial II</option></select><p class="help">Canviar el curs actualitza els desplegables curriculars.</p></div>${field('materia','Matèria','input')}${field('durada','Durada','input')}${field('docentGrup','Docent / grup','input')}<div class="field"><label>Font d’impressió</label><select id="fontPrint"><option ${state.settings.font==='Times New Roman'?'selected':''}>Times New Roman</option><option ${state.settings.font==='Arial'?'selected':''}>Arial</option></select></div></div>`;
   if(state.docenteTab==='context') return `<div class="form-row">${field('context','Context')}${field('repte','Repte')}${field('justificacio','Justificació')}${field('producteFinal','Producte final')}</div>`;
-  if(state.docenteTab==='curr') return `<div class="form-row">${field('competenciesEspecifiques','Competències específiques')}${field('criterisAvaluacio','Criteris d’avaluació')}${field('competenciesTransversals','Competències transversals')}</div>`;
-  if(state.docenteTab==='obj') return `<div class="form-row">${field('objectius','Objectius d’aprenentatge')}${field('blocsSabers','Blocs de sabers')}${field('sabersConcrets','Sabers concrets')}</div>`;
-  if(state.docenteTab==='met') return `<div class="form-row">${field('metodologia','Metodologia')}${field('organitzacio','Organització de l’aula')}${field('recursos','Recursos')}${field('mesuresSuports','Mesures i suports')}</div>`;
+  if(state.docenteTab==='curr') return `<p class="help">Tria ítems del currículum i afegeix-los al camp. També pots escriure o adaptar el text manualment.</p><div class="form-row">${pickList('competenciesEspecifiques','Competències específiques',fixed.competenciesEspecifiques)}${pickList('criterisAvaluacio','Criteris d’avaluació',cur.criteris)}${pickList('competenciesTransversals','Competències transversals',fixed.competenciesTransversals)}</div>`;
+  if(state.docenteTab==='obj') return `<p class="help">Desplegables vinculats al curs seleccionat: objectius generals, blocs del curs i sabers concrets.</p><div class="form-row">${pickList('objectius','Objectius d’aprenentatge',fixed.objectius)}${pickList('blocsSabers','Blocs de sabers',cur.blocs)}${pickList('sabersConcrets','Sabers concrets',cur.sabers)}</div>`;
+  if(state.docenteTab==='met') return `<div class="form-row">${pickList('metodologia','Metodologia',fixed.metodologia)}${pickList('organitzacio','Organització de l’aula',fixed.organitzacio)}${pickList('recursos','Recursos',fixed.recursos)}${pickList('mesuresSuports','Mesures i suports',fixed.mesuresSuports)}</div>`;
   if(state.docenteTab==='act') return `<div class="form-row">${field('inicials','Inicials: què en sabem?')}${field('desenvolupament','Desenvolupament: aprenem nous continguts')}${field('estructuracio','Estructuració: què hem après?')}${field('aplicacio','Aplicació: apliquem el que hem après')}</div>`;
-  if(state.docenteTab==='aval') return `<div class="form-row">${field('evidencies','Evidències')}${field('instruments','Instruments')}${field('retornMillora','Retorn i millora')}</div>`;
-  if(state.docenteTab==='vec') return `<div class="form-row">${field('vectors','Vectors')}</div><p class="help">Inclou aprenentatges competencials, perspectiva de gènere, universalitat, llengües, ciutadania democràtica i benestar emocional.</p>`;
-  if(state.docenteTab==='rub') return `<div class="rubric-editor" id="rubricEditor">${(s.rubrica||[]).map((r,i)=>rubricRow(r,i)).join('')}</div><button class="btn ghost" id="addRubric">Afegir ítem</button>`;
+  if(state.docenteTab==='aval') return `<div class="form-row">${pickList('evidencies','Evidències',fixed.evidencies)}${pickList('instruments','Instruments',fixed.instruments)}${pickList('retornMillora','Retorn i millora',fixed.retornMillora)}</div>`;
+  if(state.docenteTab==='vec') return `<div class="form-row">${pickList('vectors','Vectors',fixed.vectors)}</div><p class="help">Els vectors es poden seleccionar del desplegable o redactar de manera adaptada a la situació.</p>`;
+  if(state.docenteTab==='rub') return `<p class="help">Cada fila pot vincular-se a criteris del curs. Pots afegir criteris amb el desplegable i ajustar els descriptors NA, AS, AN i AE.</p><div class="rubric-editor" id="rubricEditor">${(s.rubrica||[]).map((r,i)=>rubricRow(r,i,cur.criteris)).join('')}</div><button class="btn ghost" id="addRubric">Afegir ítem</button>`;
   return `<div class="grid two"><div class="panel"><h3>Importar JSON</h3><input type="file" id="importJson" accept=".json,application/json"><p class="help">Lectura estructurada completa.</p></div><div class="panel"><h3>Importar TXT</h3><input type="file" id="importTxt" accept=".txt,text/plain"><p class="help">Reconeix camps en majúscules com TÍTOL, CURS, CONTEXT, REPTE, RÚBRICA...</p></div><div class="panel"><h3>Importar DOCX bàsic</h3><input type="file" id="importDocx" accept=".docx"><p class="help">Sense llibreries externes. Pot extreure text bàsic de document.xml, però no conserva formats complexos.</p></div><div class="panel"><h3>Gestió</h3><button class="btn danger" id="clearCustom">Esborrar SA creades/importades</button></div></div>`;
 }
-function rubricRow(r,i){return `<div class="form-row"><input data-rub="item" data-i="${i}" placeholder="Ítem" value="${escAttr(r.item||'')}"><input data-rub="criteris" data-i="${i}" placeholder="Criteris" value="${escAttr(r.criteris||'')}"><input data-rub="na" data-i="${i}" placeholder="NA" value="${escAttr(r.na||'')}"><input data-rub="as" data-i="${i}" placeholder="AS" value="${escAttr(r.as||'')}"><input data-rub="an" data-i="${i}" placeholder="AN" value="${escAttr(r.an||'')}"><input data-rub="ae" data-i="${i}" placeholder="AE" value="${escAttr(r.ae||'')}"></div>`;}
+function pickList(key,label,options){const val=state.currentDoc[key]||'';return `<div class="field picker-field"><label>${label}</label><textarea data-doc="${key}">${esc(val)}</textarea><div class="picker-row"><select data-picker="${key}"><option value="">Selecciona un ítem del currículum...</option>${options.map(o=>`<option value="${escAttr(o)}">${esc(o)}</option>`).join('')}</select><button type="button" class="btn ghost mini" data-add-picker="${key}">Afegir</button></div></div>`;}
+function rubricRow(r,i,criteris=[]){return `<div class="rubric-block"><div class="form-row"><input data-rub="item" data-i="${i}" placeholder="Ítem" value="${escAttr(r.item||'')}"><textarea data-rub="criteris" data-i="${i}" placeholder="Criteris">${esc(r.criteris||'')}</textarea><input data-rub="na" data-i="${i}" placeholder="NA" value="${escAttr(r.na||'')}"><input data-rub="as" data-i="${i}" placeholder="AS" value="${escAttr(r.as||'')}"><input data-rub="an" data-i="${i}" placeholder="AN" value="${escAttr(r.an||'')}"><input data-rub="ae" data-i="${i}" placeholder="AE" value="${escAttr(r.ae||'')}"></div><div class="picker-row rubric-picker"><select data-rub-picker="${i}"><option value="">Afegir criteri del currículum...</option>${criteris.map(c=>`<option value="${escAttr(c)}">${esc(c)}</option>`).join('')}</select><button type="button" class="btn ghost mini" data-add-rub-crit="${i}">Afegir criteri</button></div></div>`;}
 function bindDocent(){
   app.querySelectorAll('[data-dtab]').forEach(b=>b.addEventListener('click',()=>{saveDocInputs(); state.docenteTab=b.dataset.dtab; render();}));
   app.querySelectorAll('[data-doc]').forEach(el=>el.addEventListener('input',()=>{state.currentDoc[el.dataset.doc]=el.value;}));
+  q('#docCourse')?.addEventListener('change',e=>{state.currentDoc.curs=e.target.value; render();});
+  app.querySelectorAll('[data-add-picker]').forEach(btn=>btn.addEventListener('click',()=>{
+    const key=btn.dataset.addPicker;
+    const sel=app.querySelector(`[data-picker="${key}"]`);
+    addToField(key, sel?.value || '');
+    render();
+  }));
   app.querySelectorAll('[data-rub]').forEach(el=>el.addEventListener('input',()=>{const i=+el.dataset.i; state.currentDoc.rubrica[i][el.dataset.rub]=el.value;}));
+  app.querySelectorAll('[data-add-rub-crit]').forEach(btn=>btn.addEventListener('click',()=>{
+    const i=+btn.dataset.addRubCrit;
+    const sel=app.querySelector(`[data-rub-picker="${i}"]`);
+    addToRubricCriteria(i, sel?.value || '');
+    render();
+  }));
   q('#fontPrint')?.addEventListener('change',e=>{state.settings.font=e.target.value; localStorage.setItem(SETTINGS_KEY, JSON.stringify(state.settings));});
   q('#addRubric')?.addEventListener('click',()=>{state.currentDoc.rubrica.push({item:'',criteris:'',na:'',as:'',an:'',ae:''}); render();});
   q('#saveSA')?.addEventListener('click',()=>{saveDocInputs(); saveCustomSA(state.currentDoc); toastMsg('SA guardada al navegador.');});
@@ -147,7 +323,23 @@ function bindDocent(){
   q('#importTxt')?.addEventListener('change',e=>readFile(e.target.files[0],txt=>{state.currentDoc=parseTxtSA(txt); toastMsg('TXT importat.'); render();}));
   q('#importDocx')?.addEventListener('change',async e=>{const file=e.target.files[0]; if(!file) return; const text=await extractDocxText(file); state.currentDoc=parseTxtSA(text); toastMsg(text?'DOCX importat de manera bàsica.':'No s’ha pogut llegir el DOCX.'); render();});
 }
-function saveDocInputs(){app.querySelectorAll('[data-doc]').forEach(el=>state.currentDoc[el.dataset.doc]=el.value);}
+function addToField(key,value){
+  if(!value) return;
+  saveDocInputs();
+  const current=arr(state.currentDoc[key]);
+  if(!current.includes(value)) current.push(value);
+  state.currentDoc[key]=current.join('\n');
+}
+function addToRubricCriteria(i,value){
+  if(!value) return;
+  saveDocInputs();
+  state.currentDoc.rubrica=state.currentDoc.rubrica||[];
+  state.currentDoc.rubrica[i]=state.currentDoc.rubrica[i]||{item:'',criteris:'',na:'',as:'',an:'',ae:''};
+  const current=arr(state.currentDoc.rubrica[i].criteris);
+  if(!current.includes(value)) current.push(value);
+  state.currentDoc.rubrica[i].criteris=current.join('\n');
+}
+function saveDocInputs(){app.querySelectorAll('[data-doc]').forEach(el=>state.currentDoc[el.dataset.doc]=el.value);app.querySelectorAll('[data-rub]').forEach(el=>{const i=+el.dataset.i; if(!state.currentDoc.rubrica[i]) state.currentDoc.rubrica[i]={item:'',criteris:'',na:'',as:'',an:'',ae:''}; state.currentDoc.rubrica[i][el.dataset.rub]=el.value;});}
 
 function renderAuto(){const items=['He entès el repte tecnològic.','He identificat dades, requisits i restriccions.','He aplicat càlculs o procediments tècnics adequats.','He utilitzat vocabulari tecnològic correcte.','He interpretat esquemes, circuits, màquines o processos.','He justificat la proposta amb criteris tècnics.','He valorat seguretat, eficiència, cost i impacte ambiental.','He revisat errors i he proposat millores.','He comunicat el resultat de manera clara.'];return `<section class="card"><h2>Autoavaluació</h2><p class="muted">Valora cada ítem de 0 a 4.</p>${items.map((it,i)=>`<div class="auto-item"><label>${esc(it)}</label><select data-auto><option value="0">0 · encara no</option><option value="1">1 · inicial</option><option value="2">2 · satisfactori</option><option value="3">3 · notable</option><option value="4">4 · excel·lent</option></select></div>`).join('')}<button class="btn" id="calcAuto">Calcular autoavaluació</button><div id="autoOut" class="result">La recomanació apareixerà aquí.</div></section>`;}
 function bindAuto(){q('#calcAuto')?.addEventListener('click',()=>{const vals=[...app.querySelectorAll('[data-auto]')].map(s=>+s.value); const total=vals.reduce((a,b)=>a+b,0); const max=vals.length*4; const pct=Math.round(total/max*100); let rec=pct<50?'Cal reforçar la identificació de dades, el procediment i la justificació tècnica.':pct<75?'Vas pel bon camí. Revisa unitats, vocabulari i connexió amb criteris tècnics.':pct<90?'Treball sòlid. Pots millorar l’optimització, l’impacte i la transferència a altres casos.':'Molt bon procés. Mantén la precisió i justifica limitacions i alternatives.'; q('#autoOut').textContent=`Puntuació: ${total}/${max}\nPercentatge: ${pct}%\nRecomanació: ${rec}`;});}

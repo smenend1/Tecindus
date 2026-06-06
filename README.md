@@ -7,6 +7,7 @@ PWA educativa en català per a Tecnologia Industrial I i II de Batxillerat.
 - Situacions d’aprenentatge guiades.
 - Eines tècniques amb resultat, procediment i interpretació.
 - Espai docent per crear, importar i guardar SA.
+- Desplegables curriculars per afegir objectius, criteris, competències, blocs, sabers, vectors, evidències i instruments.
 - Rúbriques amb NA, AS, AN i AE.
 - Autoavaluació de l’alumnat.
 - Funcionament offline amb Service Worker.
