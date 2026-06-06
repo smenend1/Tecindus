@@ -23,3 +23,9 @@ PWA educativa en català per a Tecnologia Industrial I i II de Batxillerat.
 ## Nota sobre DOCX
 
 La importació DOCX és bàsica perquè no s’utilitzen llibreries externes. Per a importacions fiables, és millor usar JSON o TXT amb camps en majúscules.
+
+
+## Correcció de visualització
+Aquesta versió incorpora el CSS també dins `index.html` com a còpia de seguretat. Això evita que GitHub Pages mostri la pàgina sense estils si `styles.css` no es carrega o si el navegador conserva una versió antiga a la memòria cau.
+
+Si després de pujar-la encara es veu sense format, cal obrir el menú del navegador i fer “Actualitza” o esborrar les dades del lloc perquè el Service Worker antic pot estar servint fitxers antics.
